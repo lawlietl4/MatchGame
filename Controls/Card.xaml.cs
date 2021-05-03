@@ -64,6 +64,8 @@ namespace MatchGame.Controls
 
         private string symbol;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public string Symbol
         {
             get { return symbol; } 
