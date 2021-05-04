@@ -6,16 +6,16 @@ using System.Runtime.CompilerServices;
 
 namespace MatchGame.Controls
 {
-    public partial class Card : UserControl, INotifyPropertyChanged
+    public partial class Card 
     {
         public Card()
         {
             InitializeComponent();
-            this.Loaded += Card_Loaded;
+            Loaded += Card_Loaded;
         }
         public event PropertyChangedEventHandler PropertyChanged;
         public enum eState { Inactive, Idle, Flipped, Matched }
-        public GameWindow Owner;
+        public new GameWindow Owner;
         private eState state { get; set; } = eState.Inactive;
         public eState State
         {

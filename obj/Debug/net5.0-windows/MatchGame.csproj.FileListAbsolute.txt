@@ -1,0 +1,6 @@
+C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\Controls\Card.g.cs
+C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\GameWindow.g.cs
+C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\MatchGame_MarkupCompile.cache
+C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\MatchGame_MarkupCompile.lref
