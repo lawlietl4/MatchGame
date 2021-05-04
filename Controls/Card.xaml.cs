@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace MatchGame.Controls
 {
@@ -12,8 +13,8 @@ namespace MatchGame.Controls
             InitializeComponent();
             this.Loaded += Card_Loaded;
         }
-
-        public enum eState { Inactive, Idle, Flipped, Matched}
+        public event PropertyChangedEventHandler PropertyChanged;
+        public enum eState { Inactive, Idle, Flipped, Matched }
         public GameWindow Owner;
         private eState state { get; set; } = eState.Inactive;
         public eState State
@@ -21,12 +22,12 @@ namespace MatchGame.Controls
             get { return state; }
             set
             {
-                if(value != state)
+                if (value != state)
                 {
                     state = value;
                     Interactable = (state == eState.Idle);
                     Show = (state == eState.Flipped || state == eState.Matched);
-                    NotifyPropertyChanged("State");
+                    NotifyPropertyChanged(nameof(State));
                 }
             }
         }
@@ -35,7 +36,7 @@ namespace MatchGame.Controls
         {
             set
             {
-                if(value)
+                if (value)
                 {
                     lblSymbol.Visibility = Visibility.Visible;
                     imgCard.Visibility = Visibility.Hidden;
@@ -54,24 +55,22 @@ namespace MatchGame.Controls
             get { return interactable; }
             set
             {
-                if(value != interactable)
+                if (value != interactable)
                 {
                     interactable = value;
-                    NotifyPropertyChanged("Interactable");
+                    NotifyPropertyChanged(nameof(Interactable));
                 }
             }
         }
 
         private string symbol;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public string Symbol
         {
-            get { return symbol; } 
+            get { return symbol; }
             set
             {
-                if(value != symbol)
+                if (value != symbol)
                 {
                     symbol = value;
                     NotifyPropertyChanged("Symbol");
@@ -90,5 +89,9 @@ namespace MatchGame.Controls
             State = eState.Flipped;
             Owner.SetCard(this);
         }
-    } 
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
 }
