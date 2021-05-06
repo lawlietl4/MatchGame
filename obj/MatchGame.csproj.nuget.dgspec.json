@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lawliet\\source\\repos\\MatchGame\\MatchGame.csproj": {}
+    "C:\\Users\\lawliet\\Source\\Repos\\lawlietl4\\MatchGame\\MatchGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lawliet\\source\\repos\\MatchGame\\MatchGame.csproj": {
+    "C:\\Users\\lawliet\\Source\\Repos\\lawlietl4\\MatchGame\\MatchGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lawliet\\source\\repos\\MatchGame\\MatchGame.csproj",
+        "projectUniqueName": "C:\\Users\\lawliet\\Source\\Repos\\lawlietl4\\MatchGame\\MatchGame.csproj",
         "projectName": "MatchGame",
-        "projectPath": "C:\\Users\\lawliet\\source\\repos\\MatchGame\\MatchGame.csproj",
+        "projectPath": "C:\\Users\\lawliet\\Source\\Repos\\lawlietl4\\MatchGame\\MatchGame.csproj",
         "packagesPath": "C:\\Users\\lawliet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lawliet\\source\\repos\\MatchGame\\obj\\",
+        "outputPath": "C:\\Users\\lawliet\\Source\\Repos\\lawlietl4\\MatchGame\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lawliet\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

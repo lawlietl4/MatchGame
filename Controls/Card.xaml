@@ -3,12 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MatchGame"
         mc:Ignorable="d"
         Height="100" Width="80">
+
     <Grid>
-        <Button x:Name="btnCard" IsEnabled="{Binding Interactable}" BorderBrush="Black" Background="White" Click="btnCard_Click">
-            <Image x:Name="imgCard" Source="../Resources/card.png"/>
+        <Button x:Name="btnCard" IsEnabled="{Binding Interactable}" BorderBrush="Black" Background="White" Click="btnCard_Click" IsDefault="True">
+            <Image x:Name="imgCard" Source="../Resources/yugiohBack.png"/>
         </Button>
         <Label x:Name="lblSymbol" Visibility="Hidden" FontSize="64" FontFamily="WebDings" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding Symbol}"/>
     </Grid>

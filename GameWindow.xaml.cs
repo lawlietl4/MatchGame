@@ -1,6 +1,7 @@
 ﻿using MatchGame.Controls;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
@@ -31,6 +32,7 @@ namespace MatchGame
             card.Symbol = symbols[r];
             symbols.RemoveAt(r);
             cards.Add(card);
+            Cards.Add(card);
         }
         public void SelectCard(Card card)
         {
@@ -67,9 +69,9 @@ namespace MatchGame
                         }
                     }
                     //start timer, after a second the TimerTick is called and the cards reset
-                    //timer.Start();
-                    timer.Interval -= TimeSpan.FromSeconds(1);
-                    //timer.Stop();
+                    timer.Start();
+                    //timer.Interval -= TimeSpan.FromSeconds(1.0);
+                    timer.Stop();
                 }
             }
         }
