@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Threading;
 
 namespace MatchGame
@@ -33,6 +34,7 @@ namespace MatchGame
         }
         public void SelectCard(Card card)
         {
+            int correctNum = 5;
             if (card1 == null)
             {
                 //set card1 to card
@@ -53,6 +55,7 @@ namespace MatchGame
                 }
                 else
                 {
+                    correctNum -= 1;
                     //disable all cards, so they can't be selected for a second
                     //this allows the player to see the flipped card for a moment
                     foreach (Card c in cards)
@@ -64,9 +67,9 @@ namespace MatchGame
                         }
                     }
                     //start timer, after a second the TimerTick is called and the cards reset
-                    timer.Start();
+                    //timer.Start();
                     timer.Interval -= TimeSpan.FromSeconds(1);
-                    timer.Stop();
+                    //timer.Stop();
                 }
             }
         }
@@ -84,9 +87,9 @@ namespace MatchGame
             }
         }
 
-        internal void SetCard(Card card)
-        {
-            throw new NotImplementedException();
-        }
+        //internal void SelectCard(Card card)
+        //{
+            
+        //}
     }
 }

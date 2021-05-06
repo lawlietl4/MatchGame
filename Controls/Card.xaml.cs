@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 
 namespace MatchGame.Controls
 {
-    public partial class Card 
+    public partial class Card : UserControl
     {
         public Card()
         {
@@ -15,7 +15,7 @@ namespace MatchGame.Controls
         }
         public event PropertyChangedEventHandler PropertyChanged;
         public enum eState { Inactive, Idle, Flipped, Matched }
-        public new GameWindow Owner;
+        public GameWindow Owner;
         private eState state { get; set; } = eState.Inactive;
         public eState State
         {
@@ -87,7 +87,7 @@ namespace MatchGame.Controls
         private void btnCard_Click(object sender, RoutedEventArgs e)
         {
             State = eState.Flipped;
-            Owner.SetCard(this);
+            Owner.SelectCard(this);
         }
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {

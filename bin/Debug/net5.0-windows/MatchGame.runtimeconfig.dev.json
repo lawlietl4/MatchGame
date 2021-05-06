@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\lawliet\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lawliet\\.nuget\\packages"
+    ]
+  }
+}

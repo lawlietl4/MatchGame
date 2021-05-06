@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:uc="clr-namespace:MatchGame.Controls.Card"
+        xmlns:uc="clr-namespace:MatchGame.Controls"
         mc:Ignorable="d"
         Title="Match Game" Height="450" Width="600">
     <Grid>
@@ -14,17 +14,37 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <!--create 4 proportional columns-->
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <!--create 3 proportional rows-->
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
             <uc:Card Margin="5" Grid.Column="0" Grid.Row="0"/>
             <uc:Card Margin="5" Grid.Column="1" Grid.Row="0"/>
+            <uc:Card Margin="5" Grid.Column="2" Grid.Row="0"/>
+            <uc:Card Margin="5" Grid.Column="3" Grid.Row="0"/>
+            <uc:Card Margin="5" Grid.Column="0" Grid.Row="1"/>
+            <uc:Card Margin="5" Grid.Column="1" Grid.Row="1"/>
+            <uc:Card Margin="5" Grid.Column="2" Grid.Row="1"/>
+            <uc:Card Margin="5" Grid.Column="3" Grid.Row="1"/>
+            <uc:Card Margin="5" Grid.Column="0" Grid.Row="2"/>
+            <uc:Card Margin="5" Grid.Column="1" Grid.Row="2"/>
+            <uc:Card Margin="5" Grid.Column="2" Grid.Row="2"/>
+            <uc:Card Margin="5" Grid.Column="3" Grid.Row="2"/>
             <!--create the rest of the columns and rows (4x3) of uc:Card-->
         </Grid>
         <Border BorderBrush="Black" BorderThickness="3" Grid.Column="1">
             <StackPanel>
                 <!--will create controls here for bonus features-->
+                <TextBlock Text="Match Game"/>
+                <!--<TextBlock Text="{Binding correctNum}" Width="75" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+
             </StackPanel>
         </Border>
     </Grid>
