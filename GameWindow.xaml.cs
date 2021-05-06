@@ -32,7 +32,6 @@ namespace MatchGame
             card.Symbol = symbols[r];
             symbols.RemoveAt(r);
             cards.Add(card);
-            Cards.Add(card);
         }
         public void SelectCard(Card card)
         {
