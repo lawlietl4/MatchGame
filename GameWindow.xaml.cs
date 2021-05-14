@@ -1,7 +1,9 @@
 ﻿using MatchGame.Controls;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Threading;
 
 namespace MatchGame
@@ -20,7 +22,6 @@ namespace MatchGame
         private Card card2 = null;
         public GameWindow()
         {
-            InitializeComponent();
             timer.Interval = TimeSpan.FromSeconds(1.0);
             timer.Tick += TimerTick;
         }
@@ -68,8 +69,8 @@ namespace MatchGame
                     }
                     //start timer, after a second the TimerTick is called and the cards reset
                     timer.Start();
-                    //timer.Interval -= TimeSpan.FromSeconds(1);
-                    //timer.stop();
+                    //timer.Interval -= TimeSpan.FromSeconds(1.0);
+                    timer.Stop();
                 }
             }
         }
@@ -82,9 +83,14 @@ namespace MatchGame
                 {
                     c.State = Card.eState.Idle;
                 }
+                card1 = null;
+                card2 = null;
             }
-            card1 = null;
-            card2 = null;
         }
+
+        //internal void SelectCard(Card card)
+        //{
+            
+        //}
     }
 }
