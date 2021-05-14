@@ -1,8 +1,6 @@
-﻿using System;
+﻿using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 
 namespace MatchGame.Controls
 {
@@ -12,6 +10,7 @@ namespace MatchGame.Controls
         {
             InitializeComponent();
             Loaded += Card_Loaded;
+            //DataContext = this;
         }
         public event PropertyChangedEventHandler PropertyChanged;
         public enum eState { Inactive, Idle, Flipped, Matched }
@@ -73,14 +72,14 @@ namespace MatchGame.Controls
                 if (value != symbol)
                 {
                     symbol = value;
-                    NotifyPropertyChanged("Symbol");
+                    NotifyPropertyChanged(nameof(Symbol));
                 }
             }
         }
 
         private void Card_Loaded(object sender, RoutedEventArgs e)
         {
-            Owner = (GameWindow)Window.GetWindow(btnCard);
+            Owner = (GameWindow)Window.GetWindow(this);
             Owner.RegisterCard(this);
         }
 
@@ -89,7 +88,7 @@ namespace MatchGame.Controls
             State = eState.Flipped;
             Owner.SelectCard(this);
         }
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        private void NotifyPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }

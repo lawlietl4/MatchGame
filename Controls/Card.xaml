@@ -1,14 +1,16 @@
-﻿<UserControl x:Class="MatchGame.Controls.Card"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MatchGame"
-        mc:Ignorable="d"
-        Height="100" Width="80">
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:MatchGame.Controls" x:Class="MatchGame.Controls.Card"
+             mc:Ignorable="d"
+        Height="100" Width="80"
+             DataContext="{Binding RelativeSource={RelativeSource Self}}"
+             >
     <Grid>
         <Button x:Name="btnCard" IsEnabled="{Binding Interactable}" BorderBrush="Black" Background="White" Click="btnCard_Click">
-            <Image x:Name="imgCard" Source="../Resources/card.png"/>
+            <Image x:Name="imgCard" Source="/Resources/card.png" IsEnabled="True"/>
         </Button>
         <Label x:Name="lblSymbol" Visibility="Hidden" FontSize="64" FontFamily="WebDings" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{Binding Symbol}"/>
     </Grid>

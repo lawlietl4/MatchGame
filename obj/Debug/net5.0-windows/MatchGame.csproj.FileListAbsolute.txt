@@ -22,4 +22,3 @@ C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\MatchGame.dll
 C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\ref\MatchGame.dll
 C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\MatchGame.pdb
 C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\MatchGame.genruntimeconfig.cache
-C:\Users\lawliet\source\repos\MatchGame\obj\Debug\net5.0-windows\MatchGame.csprojAssemblyReference.cache
